@@ -1,4 +1,4 @@
-# 🔗 Chained Together VR
+# 🔗 Linked Fate VR
 
 ## **Overview**
 **Chained Together VR** is a cooperative climbing challenge set in VRChat. You and your friend are bound together by a metal chain, and your goal is to ascend from the fiery depths of **Hell** to the radiant peaks of **Heaven**. Inspired by *Chained Together*, this VR experience brings the thrill of teamwork, physics-based movement, and hilarious chaos into virtual reality.
