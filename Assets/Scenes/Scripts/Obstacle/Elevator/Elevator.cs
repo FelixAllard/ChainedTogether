@@ -20,7 +20,6 @@ namespace Scenes.Scripts.Obstacle.Elevator
         private bool movingForward = true;
         private bool waiting = false;
         private float waitTime = 0f;
-        private bool completed = false;
 
         void Start()
         {
@@ -32,19 +31,24 @@ namespace Scenes.Scripts.Obstacle.Elevator
         public override void Interact()
         {
             base.Interact();
-            if(moving == false)
-                SendCustomNetworkEvent(NetworkEventTarget.All,nameof(StartElevator));
+            if (!moving)
+            {
+                SendCustomNetworkEvent(NetworkEventTarget.All, nameof(StartElevator));
+            }
         }
 
         public void StartElevator()
         {
             moving = true;
+            elapsedTime = 0f;
+            waitTime = 0f;
+            waiting = false;
+            movingForward = true;
         }
-        
 
         void Update()
         {
-            if (!moving || completed) return;
+            if (!moving) return;
 
             if (waiting)
             {
@@ -61,14 +65,15 @@ namespace Scenes.Scripts.Obstacle.Elevator
 
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / journeyTime);
-            objectToMove.position = movingForward ? Vector3.Lerp(initialPosition, endPosition, t) : Vector3.Lerp(endPosition, initialPosition, t);
+            objectToMove.position = movingForward
+                ? Vector3.Lerp(initialPosition, endPosition, t)
+                : Vector3.Lerp(endPosition, initialPosition, t);
 
             if (t >= 1f)
             {
                 if (!movingForward)
                 {
-                    completed = true;
-                    moving = false;
+                    moving = false; // Allow reactivation
                 }
                 else
                 {
@@ -77,4 +82,5 @@ namespace Scenes.Scripts.Obstacle.Elevator
             }
         }
     }
+
 }
