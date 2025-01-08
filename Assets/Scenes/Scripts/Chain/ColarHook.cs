@@ -80,6 +80,10 @@ namespace Scenes.Scripts.Chain
             BoxCollider boxCollider = colarRigidBody.gameObject.GetComponent<BoxCollider>();
             boxCollider.enabled = false;
             isTransferringOwnership = false;
+            if (player != Networking.LocalPlayer)
+            {
+                colarRigidBody.isKinematic = true;
+            }
         }
 
         public void OwnerTookControl()
@@ -89,6 +93,10 @@ namespace Scenes.Scripts.Chain
             BoxCollider boxCollider = colarRigidBody.gameObject.GetComponent<BoxCollider>();
             boxCollider.enabled = false;
             isTransferringOwnership = false;
+            if (player != Networking.LocalPlayer)
+            {
+                colarRigidBody.isKinematic = true;
+            }
         }
         
 

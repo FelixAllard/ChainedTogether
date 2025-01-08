@@ -3672,7 +3672,7 @@ MonoBehaviour:
   otherCollar: {fileID: 7511084324579127021}
   otherCollarHook: {fileID: 7544503214142575118}
   otherCollarRigidBody: {fileID: 5867492091929103870}
-  maximumDistanceCollar: 7
+  maximumDistanceCollar: 8
   multiplierCollarVelocityStrenght: 50
   minimumMagnitude: 5
   linkTransform:
@@ -3707,8 +3707,8 @@ MonoBehaviour:
   - {fileID: 7492057139541923557}
   - {fileID: 3924021599097901279}
   linkRigidBody: []
-  tresholdDeviation: 0.05
-  maximumCableLenght: 6.5
+  tresholdDeviation: 0.5
+  maximumCableLenght: 7
   redBall: {fileID: 0}
 --- !u!114 &6241100631870228934
 MonoBehaviour:
@@ -5045,7 +5045,7 @@ MonoBehaviour:
   otherCollar: {fileID: 4647663352917116826}
   otherCollarHook: {fileID: 1005237903917990335}
   otherCollarRigidBody: {fileID: 2215544322717903763}
-  maximumDistanceCollar: 7
+  maximumDistanceCollar: 8
   multiplierCollarVelocityStrenght: 40
   minimumMagnitude: 5
   linkTransform:
@@ -5080,8 +5080,8 @@ MonoBehaviour:
   - {fileID: 4172962620458859838}
   - {fileID: 9053628955554853084}
   linkRigidBody: []
-  tresholdDeviation: 0.05
-  maximumCableLenght: 6.5
+  tresholdDeviation: 0.5
+  maximumCableLenght: 7
   redBall: {fileID: 0}
 --- !u!114 &6392243991612395551
 MonoBehaviour:
